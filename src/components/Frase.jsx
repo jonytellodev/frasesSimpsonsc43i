@@ -1,19 +1,19 @@
 import { Card } from "react-bootstrap";
 
-const Frase = () => {
+const Frase = ({datosPersonaje}) => {
   return (
     <section className="my-5">
-      <h2>Nelson Muntz</h2>
+      <h2>{datosPersonaje.character}</h2>
       <hr />
-      <img className="mb-3" src='https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FNelsonMuntz.png?1497567511185' alt='Nelson' />
+      <img className="mb-3" src={datosPersonaje.image} alt='Nelson' />
       <Card>
         <Card.Body>
           <figure>
             <blockquote className="blockquote">
-              <p>Shoplifting is a victimless crime, like punching someone in the dark.</p>
+              <p>{datosPersonaje.quote}</p>
             </blockquote>
             <figcaption className="blockquote-footer">
-            Nelson Muntz in <cite title="Source Title">The simpsons</cite>
+            {datosPersonaje.character} in <cite title="Source Title">The simpsons</cite>
             </figcaption>
           </figure>
         </Card.Body>
